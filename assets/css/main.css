@@ -89,6 +89,7 @@ Typography
 .nav-link:hover,
 .nav-link:focus {
     color: var(--color-gen-2); /*#02435E;*/
+    transition: ease-in-out 0.35s;
 }
 
 .cta-contact {
@@ -112,6 +113,7 @@ Typography
 .icons:hover,
 .icons:focus{
     color: var(--color-gen-2);/*#057CAF*/
+    transition: cubic-bezier(.65,.05,.36,1) 0.35s;
 }
 
 .hero-link-desc {
@@ -674,8 +676,8 @@ Section Hero
 
 .cta-hero:hover,
 .cta-hero:focus {
-    background: var(--color-gen-1);
-    transition: 0.5s;
+    background-color: var(--color-gen-1);
+    transition: linear 0.5s;
 }
 
 /*===================
