@@ -600,7 +600,7 @@ Section Hero
     max-height: 200px;/*550px*/
     object-fit: cover;
     object-position: 5px 10%;
-
+    filter: grayscale(100%);
 }
 
 .hero-bg{
