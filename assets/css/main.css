@@ -157,7 +157,8 @@ Typography
 }
 
 .accent-color{
-    font-weight: 400;
+    color: #7A7A7A;
+    padding-left: 1em;
 }
 
 .title-light {
@@ -964,15 +965,13 @@ Section Partners
     width: 150px;
     min-height: 100px;
     background: var(--color-bg-4);
-
+    display: grid;
+    place-items: center;
 }
 
 .partner-image {
     height: 50%;
-    /*width: 50%;*/
     object-fit: cover;
-    margin: auto;
-    transform: translate(50%, 50%);
 }
 
 
