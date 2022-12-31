@@ -570,9 +570,7 @@ Navigation
     list-style: none;
 }
 
-.cta-contact a{
 
-}
 
 /*===================
 Section Hero
@@ -738,25 +736,12 @@ Section History
     padding-left: 1em;
     margin-bottom: 2em;
 }
-/*
-.history-year::before{
-    content: '';
-    display: block;
-    width: 5px;
-    height: 30px;
-    background: var(--color-gen-2);
-    border-radius: .3em;
-    bottom: 0;
-}
-*/
+
 .card-desc {
     background: rgba(0,34,49,.8);
     width: 90%;
     padding: .4em;
     margin-top: 2em;
-    /*border-top-right-radius: .3em;
-    border-top-left-radius: .3em;*/
-
 }
 
 .card-subtitle{
@@ -803,9 +788,6 @@ Section Team
 }
 .team-subtitle{
     margin: 0;
-}
-.team-profile{
-
 }
 
 .image-cont{
@@ -1284,11 +1266,11 @@ Section Footer
         grid-column: 2 / 4;
     }
     .contact-details{
-        grid-column: 4 / 5;
-        flex-direction: column;
+        grid-column: 2 / -2;
+        flex-direction: row;
         justify-content: unset;
         margin-top: 1.5em;
-        margin-left: 4em;
+        margin-left: unset;
         position: relative;
 
     }
@@ -1304,6 +1286,7 @@ Section Footer
     }
 
      .footer-bg{
+        display: none; 
         position: absolute;
         width: 300px;
         height: 200px;
