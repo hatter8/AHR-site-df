@@ -432,7 +432,7 @@ Layout
     margin:auto 0;
     padding-left: 2em;
 }
-
+/* TODO: Change grid size to decrease image span */
 .profile-image {
     grid-column: 3 / 4;/* 543x258*/
 
@@ -1265,12 +1265,15 @@ Section Footer
     .form-cont{
         grid-column: 2 / 4;
     }
+
+    label:first-child{
+        margin-top: 0;
+    }
     .contact-details{
-        grid-column: 2 / -2;
-        flex-direction: row;
+        grid-column: 4 / -4;
+        flex-direction: column;
         justify-content: unset;
-        margin-top: 1.5em;
-        margin-left: unset;
+        margin-left: 2em;
         position: relative;
 
     }
@@ -1285,16 +1288,17 @@ Section Footer
 
     }
 
-     .footer-bg{
-        display: none; 
+     .contact-details::after{
+        content: '';
+        display: block;
         position: absolute;
         width: 300px;
         height: 200px;
         background-image: radial-gradient(circle, #EB6300 15%, transparent 10%), radial-gradient(circle, #07AAF0 15%, transparent 10%);
         background-size: 25px 25px;
         background-position: 0 0, 50px 50px;
-        bottom:100px;
-        right: 100px;
+        bottom: 0px;
+        right: -300px;
         z-index: ;
 
         }
