@@ -46,7 +46,6 @@ main {
 
 img {
     max-width: 100%;
-    /*display: block;*/
 }
 
 .cta-btn {
@@ -64,11 +63,6 @@ img {
 Typography
 =====================*/
 
-/* h1, h2, .logo{
-    font-weight: 700;
-    color: var(--color-font-1);
-    font-style: italic;
-} */
 
 .logo {
     font-size: 2rem;
@@ -153,7 +147,6 @@ Typography
     font-size: 1.15rem;
     font-weight: 600;
     color: var(--color-font-3);
-    /* border-bottom: 1px solid #707070; */
 }
 
 .accent-color{
@@ -306,9 +299,7 @@ Layout
 /*-------------Navigation------------*/
 
 .header {
-    /* background: var(--color-bg-5); */
     padding: 0;
-    /* box-shadow: 0px 1px 10px #999; */
 }
 
 .header-content{
@@ -427,16 +418,18 @@ Layout
 }
 
 .profile-desc {
-    grid-column: 2 / 3;
+    grid-column: 2 / -2;
     border-left: 6px solid var(--color-gen-1);
     margin:auto 0;
     padding-left: 2em;
 }
-/* TODO: Change grid size to decrease image span */
+
 .profile-image {
-    grid-column: 3 / 4;/* 543x258*/
-
-
+    grid-column: 2 / 4;
+    grid-row: 2;
+    max-height: 80%;
+    justify-self: center;
+    margin-top: 3em;
 }
 
 /*--------------------------History Section-----------------------*/
@@ -459,6 +452,7 @@ Layout
     display: flex;
     flex-wrap: wrap;
     gap: 2em;
+    justify-content: center;
 }
 
 .history-card {
@@ -483,8 +477,6 @@ Layout
 .gallery-wrapper{
     grid-column: 1 / -1;
     margin-bottom: 4em;
-    /*max-width: 1095px;
-    margin: 0 auto;*/
 }
 
 /*--------------------------Blog Section-----------------------*/
@@ -595,8 +587,8 @@ Section Hero
 
 .hero-image{
     width: 100%;
-    min-width: 420px; /*350px*/
-    max-height: 200px;/*550px*/
+    min-width: 420px;
+    max-height: 200px;
     object-fit: cover;
     object-position: 5px 10%;
     filter: grayscale(100%);
@@ -606,8 +598,6 @@ Section Hero
     position: absolute;
     width: 150px;
     height: 150px;
-    /*min-height: 250px;*/
-    /*background-color: #fff;*/
     background-image: radial-gradient(circle, #07AAF0 15%, transparent 10%), radial-gradient(circle, #07AAF0 15%, transparent 10%);
     background-size: 25px 25px;
     background-position: 0 0, 50px 50px;
@@ -628,9 +618,6 @@ Section Hero
     width: 100%;
     background: #64C2EB;
     padding-top: 2em;
-    /*position: absolute;
-    height: 10%;
-    top: 50%;*/
 }
 
 .hero-subtitle{
@@ -758,9 +745,7 @@ Section History
 /*===================
 Section Team
 =====================*/
-/* .team-cont {
-    position: relative;
-} */
+
 .team-desc {
     background: var(--color-bg-2);
     padding: 2em;
@@ -1037,7 +1022,7 @@ Section Footer
     align-items: center;
     justify-content: space-around;
 }
-/* TODO: reduce minmax on main grid */
+
 /*-----Desktop Grid Layout-------*/
 @media (min-width: 920px){
     .main-grid {
@@ -1065,13 +1050,11 @@ Section Footer
 
     .nav {
         position: initial;
-        /*transform: translateX(-100%);*/
         opacity: 1;
         display: grid;
         background: unset;
         transition: unset;
     }
-    /* TODO: Align nav to the right properly and increase width of header container set max-width*/
     .nav-list {
         flex-direction: row;
         justify-content: start;
@@ -1106,8 +1089,6 @@ Section Footer
         transform: rotate(270deg);
         order: unset;
         margin: 1em 0;
-        /* margin-top: 5em; */
-        /* margin-left: 2em; */
         position: relative;
     }
 
@@ -1121,7 +1102,6 @@ Section Footer
         top: 10px;
         right: -50px;
         position: absolute;
-        /* margin: 0 2em; */
     }
 
     .hero-title-block {
@@ -1137,12 +1117,10 @@ Section Footer
         height: 3px;
         background: var(--color-gen-2);
         border-radius: .3em;
-        /* margin: auto .5em; */
     }
 
     .hero-img-block{
         grid-column: 5 / span 2;
-        /*margin: 0;*/
         order: unset;
         height: 100%;
     }
@@ -1151,8 +1129,8 @@ Section Footer
     }
 
     .hero-image{
-        width: 300px; /*350px*/
-        max-height: 100%;/*550px*/
+        width: 300px;
+        max-height: 100%;
     }
 
     .hero-bg{
@@ -1189,8 +1167,6 @@ Section Footer
         position: absolute;
         width: 90px;
         height: 140px;
-        /*min-height: 250px;*/
-        /*background-color: #fff;*/
         background-image: radial-gradient(circle, #EB6300 15%, transparent 10%), radial-gradient(circle, #07AAF0 15%, transparent 10%);
         background-size: 25px 25px;
         background-position: 0 0, 50px 50px;
@@ -1211,22 +1187,25 @@ Section Footer
             opacity: 1;
         }
     }
-}
+
 /*------------Profile----------------*/
     .profile-desc {
         grid-column: 2 / 4;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* border-left: 6px solid var(--color-gen-2);
-        margin:auto 0;
-        padding-left: 1em; */
     }
     .profile-image {
         grid-column: 4 / 6;
         margin-left: 2em;
+        max-height: 100%;
+        margin-top: 0;
     }
 /*------------History----------------*/
+
+    .history-wrapper{
+        justify-content: start;
+    }
     .history-subtitle{
         margin-left: 0;
     }
@@ -1253,9 +1232,9 @@ Section Footer
 
 /*--------------Gallery----------------*/
 
-.gallery-cont{
+    .gallery-cont{
 
-}
+    }
 
 /*--------------Footer----------------*/
 
