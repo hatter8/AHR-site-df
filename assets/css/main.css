@@ -1,4 +1,4 @@
-/*Ali site CSS*/
+/*AHRacing site CSS stylesheet*/
 
 /*========FONTS=========*/
 
@@ -444,9 +444,6 @@ Layout
     order: -1;
     margin: auto;
 }
-.history-year {
-
-}
 
 .history-wrapper {
     display: flex;
@@ -515,7 +512,7 @@ Layout
 }
 
 /*===================
-General
+General Styling
 =====================*/
 
 .section-title::before{
@@ -837,14 +834,6 @@ Section Gallery
     height: 100%;
     display: grid;
     align-content: space-between;
-
-}
-.card_1,
-.card_2,
-.card_3,
-.card_4,
-.card_5,
-.card_6 {
 
 }
 
@@ -1232,9 +1221,7 @@ Section Footer
 
 /*--------------Gallery----------------*/
 
-    .gallery-cont{
 
-    }
 
 /*--------------Footer----------------*/
 
