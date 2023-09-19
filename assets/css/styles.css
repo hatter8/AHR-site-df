@@ -138,7 +138,7 @@ Typography
 }
 
 .watermark{
-    font-size: 8rem;
+    font-size: 5rem;
     font-style: italic;
     opacity: .1;
 }
@@ -414,7 +414,7 @@ Layout
 .profile-w-mark{
     position: absolute;
     left: 150px;
-    top: 50px;
+    top: 75px;
 }
 
 .profile-desc {
@@ -690,7 +690,7 @@ Section History
 .history-w-mark{
     position: absolute;
     left: 150px;
-    top: 20px;
+    top: 50px;
 }
 .history-wrapper {
     margin-bottom: 2em;
@@ -989,6 +989,12 @@ Section Footer
     margin-bottom: 4em;
 }
 
+@media (max-width: 540px) {
+    .contact-details{
+        flex-direction: column;
+    }
+}
+
 .contact-card {
     background: var(--color-bg-4);
     width: 100%;
@@ -1190,6 +1196,14 @@ Section Footer
         max-height: 100%;
         margin-top: 0;
     }
+
+    .profile-w-mark{
+        top: 50px;
+    }
+
+    .watermark{
+        font-size: 7rem;
+    }
 /*------------History----------------*/
 
     .history-wrapper{
@@ -1197,6 +1211,10 @@ Section Footer
     }
     .history-subtitle{
         margin-left: 0;
+    }
+
+    .history-w-mark{
+        top: 20px;
     }
 
 /*--------------Team----------------*/
